@@ -2,19 +2,22 @@ import React from 'react'
 
 export function Header() {
     return (
-        <header className='bg-black py-5 px-10 flex gap-5 max-w-6xl justify-center absolute'>
+        <header className='bg-black p-5 md:py-5 md:px-10 top-6 flex gap-5 max-w-7xl w-11/12 right-0 left-0 m-auto justify-center absolute'>
             <div id='logo' className='bg-blue-600'>
-                <div className='w-28'>
+                <div>
                     Logo
                 </div>
             </div>
-            <div id='phrase' className='bg-red-600 flex flex-grow'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, repellendus!</div>
-            <div id='socials' className='bg-purple-500 p-5 flex gap-5'>
-                <div className='w-10 h-10 bg-yellow-400'></div>
-                <div className='w-10 h-10 bg-yellow-400'></div>
-                <div className='w-10 h-10 bg-yellow-400'></div>
+            <div id='phrase' className='bg-red-600 flex flex-grow'>
+                <p className='hidden md:block'>
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, enim?"
+                </p>
             </div>
-
+            <div id='socials' className='bg-purple-500'>
+                <div>
+                    Isotipo
+                </div>
+            </div>
         </header>
     )
 }
