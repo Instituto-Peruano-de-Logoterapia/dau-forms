@@ -7,6 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        'dau-sky-blue': '#77B8D9',
+        'dau-light-sky-blue': '#B3D6EA',
+        'dau-deep-blue': '#001A5A',
+        'dau-blue': '#4A72B1',
+        'dau-light-blue': '#4D93C4'
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
