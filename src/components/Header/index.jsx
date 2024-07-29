@@ -2,7 +2,7 @@ import React from 'react'
 
 export function Header() {
     return (
-        <header className='bg-black p-5 md:py-5 md:px-10 top-6 flex gap-5 max-w-7xl w-11/12 right-0 left-0 m-auto justify-center absolute' >
+        <header className='bg-black p-5 md:py-5 md:px-10 top-5 flex gap-5 max-w-7xl w-11/12 right-0 left-0 m-auto justify-center absolute' >
             <div id='logo' className='bg-blue-600'>
                 <div>
                     Logo

@@ -4,7 +4,7 @@ import React from "react"
 import { ProductsProvider } from "./Porducts"
 
 
-export function Providers({ children }) {
+export function ProvidersContainer({ children }) {
 
     return (
         <React.Fragment>

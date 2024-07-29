@@ -1,21 +1,20 @@
 'use client'
 
-import { useProducts } from '@app/contexts/hooks'
-import React from 'react'
+import { GridItem } from '../GridItem';
+
+import { useProducts } from '@app/contexts/hooks';
 
 export function Grid() {
 
-  const { currentProducts } = useProducts();
-
-
+  const { currentProducts, categories } = useProducts();
 
   return (
-    <div className='mt-5'>
-      <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6'>
-        <div className=''>
-          item 1
-        </div>
+    <section id='grid-wrapper' className='mt-5 m-auto w-11/12 md:max-w-4xl'>
+      <div className='grid grid-cols-2 md:grid-cols-3 gap-5'>
+        {
+          categories.map(categorie => <GridItem item={categorie} key={categorie.id} />)
+        }
       </div>
-    </div>
+    </section>
   )
 }
