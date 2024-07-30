@@ -34,6 +34,7 @@ export function Newsletter() {
         event.preventDefault();
 
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
         const { email, phone } = formState;
 
         if (!emailRegex.test(email) || email.length === 0) {
