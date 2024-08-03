@@ -5,8 +5,8 @@ import React from 'react';
 export default function Home() {
   return (
     <React.Fragment>
-      <main className='min-h-[900px] flex items-center justify-center'>
-        <div className='flex flex-col gap-4 max-w-7xl py-[150px] md:py-0'>
+      <main className='min-h-[1000px] flex items-center justify-center'>
+        <div className='flex flex-col gap-4 max-w-7xl py-[150px]'>
           <Hero />
           <Grid />
         </div>

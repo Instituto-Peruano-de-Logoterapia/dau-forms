@@ -18,9 +18,13 @@ export function ProductsProvider({ children }) {
         setCurrentProduct(product);
     }
 
-    const onSetCurrentProducts = () => {
-        const currentProducts = products.filter(products => products.categoryId === currentCategory.id);
+    const onSetCurrentProducts = (category = {}) => {
+        const currentProducts = products.filter(products => products.categoryId === category.id);
         setCurrentProducts(currentProducts);
+    }
+
+    const onSetProducts = (state) => {
+        setCurrentProducts(state);
     }
 
     return (
@@ -32,7 +36,8 @@ export function ProductsProvider({ children }) {
                 currentProducts,
                 onSetCurrentCategory,
                 onSetCurrentProduct,
-                onSetCurrentProducts
+                onSetCurrentProducts,
+                onSetProducts
             }}
         >
             {children}
