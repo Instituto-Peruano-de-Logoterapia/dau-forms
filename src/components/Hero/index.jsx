@@ -28,8 +28,8 @@ export function Hero() {
     }, [currentCategory])
 
     return (
-        <div className="text-center flex flex-col gap-5  mx-auto">
-            <h1 className={`${roboto.className} uppercase font-bold text-center antialiased text-3xl md:text-5xl leading-tight`}>
+        <div className="text-center flex flex-col gap-5  mx-auto " id='hero-banner'>
+            <h1 className={`${roboto.className} uppercase font-bold text-center antialiased text-3xl md:text-5xl leading-tight mt-5`}>
                 {hero.title}
             </h1>
             <p className='p-3'>

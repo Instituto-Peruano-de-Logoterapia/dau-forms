@@ -7,7 +7,13 @@ import { ArrowBackIcon } from "@chakra-ui/icons"
 import { useProducts } from '@app/contexts/hooks';
 
 export function Grid() {
-  const { currentProducts, categories, currentCategory, onSetCurrentProducts, onSetCurrentCategory, onSetProducts } = useProducts();
+  const {
+    currentProducts,
+    categories,
+    currentCategory,
+    onSetCurrentProducts,
+    onSetCurrentCategory,
+    onSetProducts } = useProducts();
   const [gridItems, setGridItems] = useState(categories);
 
 
@@ -35,18 +41,17 @@ export function Grid() {
         {
           gridItems && gridItems.map(item => <GridItem item={item} key={item.id} />)
         }
-
       </div>
-      <div className='flex justify-end mt-10'>
-        {
-          currentCategory && (
+      {
+        currentCategory && (
+          <div className='flex justify-end mt-10'>
             <Button bg={'white'} borderRadius={'unset'} border={'1px'} borderColor={'gray'} onClick={reset}>
               <ArrowBackIcon />
               <span className='ml-2'>Regresar</span>
             </Button>
-          )
-        }
-      </div>
+          </div>
+        )
+      }
     </section>
   )
 }

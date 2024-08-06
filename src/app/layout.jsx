@@ -7,16 +7,17 @@ import "./globals.css";
 export const metadata = {
   title: "Productos Dau",
   description: "Despliegue de nuestros productos en dau",
+  icons: {
+    icon: '/isotipo-dau.png'
+  }
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} bg-neutral-100`}>
         <ProvidersContainer>
-          <Header />
           {children}
-          <Footer />
         </ProvidersContainer>
       </body>
     </html>
