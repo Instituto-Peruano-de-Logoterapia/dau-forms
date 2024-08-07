@@ -9,6 +9,8 @@ export function ProductsProvider({ children }) {
     const [currentCategory, setCurrentCategory] = useState(null);
     const [currentProduct, setCurrentProduct] = useState(null);
     const [currentProducts, setCurrentProducts] = useState(null);
+    const [gridItems, setGridItems] = useState(categories);
+
     let userAlreadyPayMe = false;
 
     const onSetCurrentCategory = (category = {}) => {
@@ -28,6 +30,10 @@ export function ProductsProvider({ children }) {
         setCurrentProducts(state);
     }
 
+    const onSetGridItems = (currentItems) => {
+        setGridItems(currentItems);
+    }
+
     return (
         <ProductsContext.Provider
             value={{
@@ -36,10 +42,12 @@ export function ProductsProvider({ children }) {
                 currentProduct,
                 currentProducts,
                 userAlreadyPayMe,
+                gridItems,
                 onSetCurrentCategory,
                 onSetCurrentProduct,
                 onSetCurrentProducts,
-                onSetProducts
+                onSetProducts,
+                onSetGridItems
             }}
         >
             {children}

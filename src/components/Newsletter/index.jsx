@@ -18,7 +18,7 @@ export function Newsletter() {
     }
 
     return (
-        <section id='newsletter' className='py-32 text-white bg-gradient-to-r from-cyan-500 to-blue-500'>
+        <section id='newsletter' className='py-32 text-white bg-gradient-to-r from-cyan-400 to-blue-500'>
             <h2 className={`${roboto.className} text-center text-2xl md:text-4xl font-normal px-2`}>
                 <span className='font-bold'>
                     {congrats ? 'MUCHAS GRACIAS' : '¿QUIERES RECIBIR MÁS INFORMACIÓN?'}</span> <br /> {congrats ? 'por suscribirte' : 'suscríbete'} a nuestro newsletter.

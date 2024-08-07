@@ -9,7 +9,7 @@ export function Header() {
             <div id='logo'>
                 <img src="/dau-logo.jpg" width={75} alt='logo-dau' title='logo-dau' />
             </div>
-            <div id='phrase' className='flex flex-grow'>
+            <div id='phrase' className='flex flex-grow justify-center'>
                 <Navigation />
             </div>
             <div id='socials' className='flex gap-2 items-center'>

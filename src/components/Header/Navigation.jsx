@@ -12,7 +12,7 @@ const navigation = [
         href: '#newsletter'
     },
     {
-        text: 'Dau Holding',
+        text: 'Grupo Dau',
         href: 'https://dauperu.com/dau-peru/',
         target: '_blank'
     }
@@ -20,7 +20,7 @@ const navigation = [
 
 export function Navigation() {
     return (
-        <nav className='flex items-center gap-5 ms-5'>
+        <nav className='flex items-center gap-5'>
             {
                 navigation.map(anchor => (
                     <Link className='hover:text-blue-400' href={anchor.href} key={anchor.href} target={!anchor.target ? '_self' : anchor.target}>
