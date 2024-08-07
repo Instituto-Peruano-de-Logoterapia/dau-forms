@@ -6,3 +6,4 @@ export * from './Footer';
 export * from './Newsletter';
 export * from './Form';
 export * from './Banner';
+export * from './Icons'

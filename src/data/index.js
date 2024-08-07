@@ -4,21 +4,24 @@ export const categories = [
         name: 'Clases Síncronas y Asíncronas',
         constantName: 'SYNC_ASYNC_PRODUCTS',
         type: 'CATEGORY',
-        description: 'Disfruta de la flexibilidad total con nuestro pack de clases síncronas y asincrónicas. Participa en sesiones en tiempo real o accede a los materiales a tu propio ritmo, según tu conveniencia.'
+        description: 'Disfruta de la flexibilidad total con nuestro pack de clases síncronas y asincrónicas. Participa en sesiones en tiempo real o accede a los materiales a tu propio ritmo, según tu conveniencia.',
+        tags: [{ text: 'Nuevos productos' }, { text: 'Descuento' }, { text: 'Certificación' }]
     },
     {
         id: 'd7d05a02-6e39-4610-b759-f61f6b94e143',
         name: 'Clases en vivo',
         constantName: 'LIVE_STREAM_PRODUCTOS',
         type: 'CATEGORY',
-        description: 'Únete a nuestras clases en vivo y aprende en tiempo real con nuestros expertos. Interactúa, pregunta y participa activamente para aprovechar al máximo cada sesión.'
+        description: 'Únete a nuestras clases en vivo y aprende en tiempo real con nuestros expertos. Interactúa, pregunta y participa activamente para aprovechar al máximo cada sesión.',
+        tags: [{ text: 'Nuevos productos' }, { text: 'Descuento' }, { text: 'Certificación' }]
     },
     {
         id: 'd6c070ad-5dd7-493b-b316-7251ff95b91c',
         name: 'Cursos en diferido',
         constantName: 'DEFER_PRODUCTS',
         type: 'CATEGORY',
-        description: 'Accede a nuestros cursos en diferido y aprende a tu propio ritmo. Disfruta de contenidos de alta calidad y vuelve a revisar las lecciones cuando lo necesites.'
+        description: 'Accede a nuestros cursos en diferido y aprende a tu propio ritmo. Disfruta de contenidos de alta calidad y vuelve a revisar las lecciones cuando lo necesites.',
+        tags: [{ text: 'Nuevos productos' }, { text: 'Descuento' }, { text: 'Certificación' }]
     },
 ]
 

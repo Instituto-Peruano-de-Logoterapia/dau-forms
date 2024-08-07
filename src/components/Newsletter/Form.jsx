@@ -3,8 +3,11 @@
 import React from 'react'
 import { Button, Flex, FormControl, Input } from '@chakra-ui/react';
 import { Form } from '../Form';
+import { useProducts } from '@app/contexts/hooks';
 
 export function NewsletterForm({ onCongrats }) {
+
+    const { userAlreadyPayMe } = useProducts();
 
     const [formState, setStateForm] = React.useState({
         fields: {
@@ -35,6 +38,11 @@ export function NewsletterForm({ onCongrats }) {
 
     const onSubmit = (event) => {
         event.preventDefault();
+
+        if (!userAlreadyPayMe) {
+            console.log('lelelel')
+            return
+        }
 
         setStateForm(prev => ({ ...prev, isLoading: true }));
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -81,7 +89,7 @@ export function NewsletterForm({ onCongrats }) {
     return (
         <Form onSubmit={onSubmit}>
             <Flex className='w-11/12 m-auto flex-col md:flex-row justify-center items-end gap-5'>
-                <FormControl isRequired>
+                <FormControl>
                     <Input
                         disabled={formState.isLoading}
                         isInvalid={formState.fields.phone.isInvalid}
@@ -93,7 +101,7 @@ export function NewsletterForm({ onCongrats }) {
                         onChange={onInputChange}
                     />
                 </FormControl>
-                <FormControl isRequired>
+                <FormControl>
                     <Input
                         disabled={formState.isLoading}
                         isInvalid={formState.fields.email.isInvalid}

@@ -45,7 +45,7 @@ export function Grid() {
       {
         currentCategory && (
           <div className='flex justify-end mt-10'>
-            <Button bg={'white'} borderRadius={'unset'} border={'1px'} borderColor={'gray'} onClick={reset}>
+            <Button bg={'white'} borderRadius={'unset'} border={'1px'} borderColor={'white'} onClick={reset}>
               <ArrowBackIcon />
               <span className='ml-2'>Regresar</span>
             </Button>

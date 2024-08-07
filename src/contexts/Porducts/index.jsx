@@ -9,6 +9,7 @@ export function ProductsProvider({ children }) {
     const [currentCategory, setCurrentCategory] = useState(null);
     const [currentProduct, setCurrentProduct] = useState(null);
     const [currentProducts, setCurrentProducts] = useState(null);
+    let userAlreadyPayMe = false;
 
     const onSetCurrentCategory = (category = {}) => {
         setCurrentCategory(category);
@@ -34,6 +35,7 @@ export function ProductsProvider({ children }) {
                 currentCategory,
                 currentProduct,
                 currentProducts,
+                userAlreadyPayMe,
                 onSetCurrentCategory,
                 onSetCurrentProduct,
                 onSetCurrentProducts,
