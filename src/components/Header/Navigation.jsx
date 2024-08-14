@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React from 'react'
 
-
 const navigation = [
     {
         text: 'Inicio',
@@ -18,16 +17,18 @@ const navigation = [
     }
 ];
 
-export function Navigation() {
+export function Navigation({ direction = 'flex-row' }) {
     return (
-        <nav className='flex items-center gap-5'>
-            {
-                navigation.map(anchor => (
-                    <Link className='hover:text-blue-400' href={anchor.href} key={anchor.href} target={!anchor.target ? '_self' : anchor.target}>
-                        {anchor.text}
-                    </Link>
-                ))
-            }
+        <nav className='hidden md:flex flex-grow justify-center'>
+            <div className={`flex items-center gap-5 ${direction}`}>
+                {
+                    navigation.map(anchor => (
+                        <Link className='hover:text-blue-400' href={anchor.href} key={anchor.href} target={!anchor.target ? '_self' : anchor.target}>
+                            {anchor.text}
+                        </Link>
+                    ))
+                }
+            </div>
         </nav>
     )
 }

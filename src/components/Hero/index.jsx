@@ -37,7 +37,7 @@ export function Hero() {
     }, [currentCategory])
 
     return (
-        <div className="text-center lg:text-left flex flex-col justify-center gap-5 p-4 mx-auto lg:w-1/2" id='hero-banner'>
+        <div className="text-center lg:text-left flex flex-col justify-center gap-5 p-6 md:p-4 mx-auto lg:w-1/2 bg-white rounded-md shadow-md max-w-[90%] md:bg-transparent md:max-w-none md:shadow-none" id='hero-banner'>
             {
                 !!currentCategory && (
                     <p className='text-center lg:text-left p-0  rounded-md tracking-wider'>
@@ -45,7 +45,7 @@ export function Hero() {
                     </p>
                 )
             }
-            <h1 className={`${roboto.className} m-0 text-center lg:text-left uppercase font-bold antialiased text-3xl md:text-4xl leading-tight mt-5 bg-gradient-to-r from-cyan-400 to-blue-600 inline-block 
+            <h1 className={`${roboto.className} m-0 text-center lg:text-left uppercase font-bold antialiased text-3xl md:text-4xl leading-tight bg-gradient-to-r from-cyan-400 to-blue-600 inline-block 
             text-transparent bg-clip-text`}>
                 {hero.title}
             </h1>
