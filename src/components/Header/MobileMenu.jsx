@@ -14,8 +14,7 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-import { FacebookIcon, TikTokIcon } from '@app/components';
-import { InstagramIcon } from '@app/components/Icons/InstagramIcon';
+import { FacebookIcon, TikTokIcon, InstagramIcon, Socials } from '@app/components';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 import { Logo } from '../Logo';
@@ -24,6 +23,32 @@ import { Navigation } from '../Navigation';
 export function MobileMenu() {
 
     const { isOpen, onOpen, onClose } = useDisclosure();
+
+    const socialLinks = [
+        {
+            link: 'https://www.tiktok.com/@dauescueladevida',
+            Icon: TikTokIcon,
+        },
+        {
+            link: 'https://www.facebook.com/dauperu',
+            Icon: FacebookIcon,
+        },
+        {
+            link: 'https://www.instagram.com/dauescueladevida/',
+            Icon: InstagramIcon,
+        }
+    ]
+
+    const navigation = [
+        {
+            text: 'Inicio',
+            href: '/'
+        },
+        {
+            text: 'Grupo Dau',
+            href: 'https://dauperu.com/dau-peru/',
+        }
+    ];
 
     return (
         <React.Fragment>
@@ -39,14 +64,28 @@ export function MobileMenu() {
                     </ModalHeader>
                     <ModalCloseButton />
                     <ModalBody mt={'25px'}>
-
+                        <div className='flex flex-col items-center text-3xl font-bold gap-2'>
+                            {
+                                navigation.map(anchor => (
+                                    <Link className='hover:text-blue-400'
+                                        href={anchor.href}
+                                        key={anchor.href}
+                                        target={'_blank'}>
+                                        {anchor.text}
+                                    </Link>
+                                ))
+                            }
+                        </div>
                     </ModalBody>
                     <ModalFooter justifyContent={'center'}>
                         <div className='flex gap-2'>
-                            <TikTokIcon />
-                            
-                            <InstagramIcon />
-                            <FacebookIcon />
+                            {
+                                socialLinks.map(socialLink => (
+                                    <Link key={socialLink.link} href={socialLink.link} target='_blank'>
+                                        <socialLink.Icon width={50} height={50} />
+                                    </Link>
+                                ))
+                            }
                         </div>
                     </ModalFooter>
                 </ModalContent>
