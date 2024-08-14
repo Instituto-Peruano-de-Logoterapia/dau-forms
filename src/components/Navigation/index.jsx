@@ -17,13 +17,17 @@ const navigation = [
     }
 ];
 
-export function Navigation({ direction = 'flex-row' }) {
+export function Navigation() {
+
     return (
         <nav className='hidden md:flex flex-grow justify-center'>
-            <div className={`flex items-center gap-5 ${direction}`}>
+            <div className={`flex items-center gap-5`}>
                 {
                     navigation.map(anchor => (
-                        <Link className='hover:text-blue-400' href={anchor.href} key={anchor.href} target={!anchor.target ? '_self' : anchor.target}>
+                        <Link className='hover:text-blue-400'
+                            href={anchor.href}
+                            key={anchor.href}
+                            target={!anchor.target ? '_self' : anchor.target}>
                             {anchor.text}
                         </Link>
                     ))
@@ -32,3 +36,4 @@ export function Navigation({ direction = 'flex-row' }) {
         </nav>
     )
 }
+

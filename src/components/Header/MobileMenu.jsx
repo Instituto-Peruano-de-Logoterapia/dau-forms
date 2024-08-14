@@ -1,20 +1,25 @@
 'use client';
 
-import React from 'react'
 import {
+    Button,
     Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalFooter,
     ModalBody,
     ModalCloseButton,
-    Button,
-    useDisclosure
+    ModalContent,
+    ModalFooter,
+    ModalHeader,
+    ModalOverlay,
+    useDisclosure,
+    Box
 } from '@chakra-ui/react';
+import React from 'react';
 
+import { FacebookIcon, TikTokIcon } from '@app/components';
+import { InstagramIcon } from '@app/components/Icons/InstagramIcon';
 import { HamburgerIcon } from '@chakra-ui/icons';
-
+import Link from 'next/link';
+import { Logo } from '../Logo';
+import { Navigation } from '../Navigation';
 
 export function MobileMenu() {
 
@@ -29,13 +34,20 @@ export function MobileMenu() {
             <Modal onClose={onClose} size={'full'} isOpen={isOpen}>
                 <ModalOverlay />
                 <ModalContent>
+                    <ModalHeader display={'flex'} justifyContent={'center'} mt={'25px'}>
+                        <Logo width={150} />
+                    </ModalHeader>
                     <ModalCloseButton />
-                    <ModalHeader>Modal Title</ModalHeader>
-                    <ModalBody>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim saepe alias laboriosam voluptates odio unde! Aliquam odio consectetur facere nesciunt? Similique dolorem voluptatum nihil deserunt atque cumque optio nisi dolor.</p>
+                    <ModalBody mt={'25px'}>
+
                     </ModalBody>
-                    <ModalFooter>
-                        <Button onClick={onClose}>Close</Button>
+                    <ModalFooter justifyContent={'center'}>
+                        <div className='flex gap-2'>
+                            <TikTokIcon />
+                            
+                            <InstagramIcon />
+                            <FacebookIcon />
+                        </div>
                     </ModalFooter>
                 </ModalContent>
             </Modal>

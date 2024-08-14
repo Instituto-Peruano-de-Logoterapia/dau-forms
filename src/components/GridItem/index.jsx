@@ -4,8 +4,9 @@ import { useProducts } from '@app/contexts/hooks';
 import { inter } from '@app/fonts';
 import { Button } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
-import React from 'react'
-import { ProfessorIcon, RatingStar } from '..';
+import React from 'react';
+
+import { RatingStar } from '../Icons';
 
 function Rating() {
 
@@ -37,18 +38,6 @@ function Tags({ tags, itemId }) {
     )
 }
 
-
-export function Professor() {
-
-    return (
-        <React.Fragment>
-            <div className='flex items-center gap-2'>
-                <ProfessorIcon />
-                <small>Dra. Sandra Barbero</small>
-            </div>
-        </React.Fragment>
-    )
-}
 
 export function NewBadge() {
     return (
@@ -91,7 +80,6 @@ export function GridItem({ item }) {
                     item.type === 'PRODUCT' && (
                         <React.Fragment>
                             <Rating />
-                            <Professor />
                         </React.Fragment>
                     )
                 }
