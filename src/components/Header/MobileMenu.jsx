@@ -77,7 +77,8 @@ export function MobileMenu() {
                             }
                         </div>
                     </ModalBody>
-                    <ModalFooter justifyContent={'center'}>
+                    <ModalFooter justifyContent={'center'} flexDir={'column'} gap={5}>
+                        <h3 className='text-2xl uppercase font-bold text-center'>Síguemos en nuestras redes sociales</h3>
                         <div className='flex gap-2'>
                             {
                                 socialLinks.map(socialLink => (

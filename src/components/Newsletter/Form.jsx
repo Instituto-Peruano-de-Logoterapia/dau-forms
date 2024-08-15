@@ -95,6 +95,7 @@ export function NewsletterForm({ onCongrats }) {
                         isInvalid={formState.fields.phone.isInvalid}
                         color={'black'}
                         bg={'white'}
+                        borderColor={'gray'}
                         name='phone'
                         borderRadius={0}
                         placeholder='Ingresa tu número de teléfono'
@@ -108,6 +109,7 @@ export function NewsletterForm({ onCongrats }) {
                         color={'black'}
                         bg={'white'}
                         borderRadius={0}
+                        borderColor={'gray'}
                         type='email'
                         name='email'
                         placeholder='Ingresa tu correo aquí'
@@ -115,10 +117,12 @@ export function NewsletterForm({ onCongrats }) {
                     />
                 </FormControl>
                 <Button
+                    bgColor={'#4D93C4'}
+                    textColor={'white'}
+                    _hover={{ bgColor: '#4D93C4' }}
                     isLoading={formState.isLoading}
                     className='w-full md:w-auto'
                     type='submit'
-                    bg={'white'}
                     py={5}
                     px={20}
                     borderRadius={0}>
