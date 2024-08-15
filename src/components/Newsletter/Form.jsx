@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { Button, Flex, FormControl, Input } from '@chakra-ui/react';
-import { Form } from '../Form';
 import { useProducts } from '@app/contexts/hooks';
 
 export function NewsletterForm({ onCongrats }) {
@@ -87,7 +86,7 @@ export function NewsletterForm({ onCongrats }) {
     }
 
     return (
-        <Form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} className='max-w-7xl m-auto'>
             <Flex className='w-11/12 m-auto flex-col md:flex-row justify-center items-end gap-5'>
                 <FormControl>
                     <Input
@@ -95,7 +94,7 @@ export function NewsletterForm({ onCongrats }) {
                         isInvalid={formState.fields.phone.isInvalid}
                         color={'black'}
                         bg={'white'}
-                        borderColor={'gray'}
+                        borderColor={'#ccc'}
                         name='phone'
                         borderRadius={'0.375rem'}
                         placeholder='Ingresa tu número de teléfono'
@@ -109,7 +108,7 @@ export function NewsletterForm({ onCongrats }) {
                         color={'black'}
                         bg={'white'}
                         borderRadius={'0.375rem'}
-                        borderColor={'gray'}
+                        borderColor={'#ccc'}
                         type='email'
                         name='email'
                         placeholder='Ingresa tu correo aquí'
@@ -130,6 +129,6 @@ export function NewsletterForm({ onCongrats }) {
                     Enviar
                 </Button>
             </Flex>
-        </Form>
+        </form>
     )
 }

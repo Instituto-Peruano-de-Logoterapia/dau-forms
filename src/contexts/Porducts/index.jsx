@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { categories, products } from "@app/data";
 
 
@@ -7,18 +7,16 @@ export const ProductsContext = createContext({});
 export function ProductsProvider({ children }) {
 
     const [currentCategory, setCurrentCategory] = useState(null);
-    const [currentProduct, setCurrentProduct] = useState(JSON.parse(localStorage.getItem('currentProductDau')) || null);
+    const [currentProduct, setCurrentProduct] = useState(null);
     const [currentProducts, setCurrentProducts] = useState(null);
     const [gridItems, setGridItems] = useState(categories);
 
     let userAlreadyPayMe = false;
-
     const onSetCurrentCategory = (category = {}) => {
         setCurrentCategory(category);
     }
 
     const onSetCurrentProduct = (product = {}) => {
-        localStorage.setItem('currentProductDau', JSON.stringify(product));
         setCurrentProduct(product);
     }
 
