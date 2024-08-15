@@ -97,7 +97,7 @@ export function NewsletterForm({ onCongrats }) {
                         bg={'white'}
                         borderColor={'gray'}
                         name='phone'
-                        borderRadius={0}
+                        borderRadius={'0.375rem'}
                         placeholder='Ingresa tu número de teléfono'
                         onChange={onInputChange}
                     />
@@ -108,7 +108,7 @@ export function NewsletterForm({ onCongrats }) {
                         isInvalid={formState.fields.email.isInvalid}
                         color={'black'}
                         bg={'white'}
-                        borderRadius={0}
+                        borderRadius={'0.375rem'}
                         borderColor={'gray'}
                         type='email'
                         name='email'
@@ -117,15 +117,16 @@ export function NewsletterForm({ onCongrats }) {
                     />
                 </FormControl>
                 <Button
-                    bgColor={'#4D93C4'}
+                    bgColor={'#35c9f7'}
                     textColor={'white'}
-                    _hover={{ bgColor: '#4D93C4' }}
+                    _hover={{ bgColor: '#3ac0e9' }}
                     isLoading={formState.isLoading}
                     className='w-full md:w-auto'
                     type='submit'
+                    borderRadius={'0.375rem'}
                     py={5}
                     px={20}
-                    borderRadius={0}>
+                >
                     Enviar
                 </Button>
             </Flex>

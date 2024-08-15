@@ -1,19 +1,21 @@
 'use client'
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Flex } from '@chakra-ui/react';
 import { Banner, Form } from '@app/components';
 import { useProducts } from '@app/contexts/hooks';
 
 export function PageContent() {
 
-    const { currentProduct } = useProducts();
+    const { currentProduct, onSetCurrentProduct } = useProducts();
+
+
 
     return (
-        <React.Fragment>
-            <Banner />
-            <div className='bg-white shadow-md p-5 mb-9 rounded-sm text-black'>
-                <h1 className='text-center text-2xl font-bold text-blue-900'>
+        <div className='px-5'>
+            <Banner idProduct={currentProduct.id} />
+            <div className='bg-white shadow-md p-5 mb-9 rounded-sm text-black flex justify-center'>
+                <h1 className='text-2xl font-bold leading-tight bg-gradient-to-r from-cyan-400 to-blue-600 text-transparent bg-clip-text'>
                     ¡Rellena el formulario y estaremos en contacto contigo!
                 </h1>
                 <Form>
@@ -21,6 +23,6 @@ export function PageContent() {
                     </Flex>
                 </Form>
             </div>
-        </React.Fragment>
+        </div>
     )
 }

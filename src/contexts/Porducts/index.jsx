@@ -7,7 +7,7 @@ export const ProductsContext = createContext({});
 export function ProductsProvider({ children }) {
 
     const [currentCategory, setCurrentCategory] = useState(null);
-    const [currentProduct, setCurrentProduct] = useState(null);
+    const [currentProduct, setCurrentProduct] = useState(JSON.parse(localStorage.getItem('currentProductDau')) || null);
     const [currentProducts, setCurrentProducts] = useState(null);
     const [gridItems, setGridItems] = useState(categories);
 
@@ -18,6 +18,7 @@ export function ProductsProvider({ children }) {
     }
 
     const onSetCurrentProduct = (product = {}) => {
+        localStorage.setItem('currentProductDau', JSON.stringify(product));
         setCurrentProduct(product);
     }
 
