@@ -9,9 +9,6 @@ import { useEffect, useState } from 'react';
 import { useProducts } from '@app/contexts/hooks';
 
 
-// TODO: INTEGRAR BACKEND API CALLS E INTEGRAR MODAL DE RESPUESTA CUANDO HAYA MANDADO EL FORMULARIO
-// TODO: AGREGAR GA
-
 export function PageContent({ productName }) {
 
     const { onSetCurrentProduct } = useProducts()
