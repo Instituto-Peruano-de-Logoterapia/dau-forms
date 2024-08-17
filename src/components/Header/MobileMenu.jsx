@@ -53,7 +53,9 @@ export function MobileMenu() {
     return (
         <React.Fragment>
             <div className='flex md:hidden items-center'>
-                <Button children={<HamburgerIcon />} onClick={onOpen} />
+                <Button onClick={onOpen}>
+                    <HamburgerIcon />
+                </Button>
             </div>
 
             <Modal onClose={onClose} size={'full'} isOpen={isOpen}>
