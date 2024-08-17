@@ -3,6 +3,7 @@
 import React from 'react'
 import { Button, Flex, FormControl, Input } from '@chakra-ui/react';
 import { useProducts } from '@app/contexts/hooks';
+import { DauService } from '@app/services';
 
 export function NewsletterForm({ onCongrats }) {
 
@@ -35,7 +36,7 @@ export function NewsletterForm({ onCongrats }) {
         }));
     }
 
-    const onSubmit = (event) => {
+    const onSubmit = async (event) => {
         event.preventDefault();
 
         if (!userAlreadyPayMe) {
@@ -78,11 +79,16 @@ export function NewsletterForm({ onCongrats }) {
             return;
         }
 
-        setTimeout(() => {
-            setStateForm(prev => ({ ...prev, isLoading: false }));
-            onCongrats();
-        }, 5000);
 
+        // api call
+        const response = await DauService.callAPI(formState, 'https://form.dauperu.com/formback/api/newsletter.php')
+
+        if (!response.ok) {
+            return;
+        }
+
+        setStateForm(prev => ({ ...prev, isLoading: false }));
+        onCongrats();
     }
 
     return (
