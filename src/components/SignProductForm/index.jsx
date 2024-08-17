@@ -46,7 +46,7 @@ export function SignProductForm() {
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        setFormState({ isloading: false, iscompleted: true, isvalid: true, errormsg: '' });
+        setFormState({ isLoading: true, isCompleted: false, isValid: true });
 
         const updatedFormData = {
             ...formData,
@@ -68,7 +68,15 @@ export function SignProductForm() {
         }
 
         setFormData(updatedFormData);
-        const response = await DauService.callAPI(formData, 'https://form.dauperu.com/formback/api/signproduct.php');
+
+        const payload = {
+            idProduct: updatedFormData.productId,
+            formData: {
+                ...updatedFormData.form
+            }
+        }
+
+        const response = await DauService.callAPI(payload, 'https://form.dauperu.com/formback/api/signproduct.php');
 
         if (!response) {
             setFormState({
@@ -79,9 +87,8 @@ export function SignProductForm() {
             return;
         }
 
-        setFormState({ isloading: false, iscompleted: true, isvalid: true });
+        setFormState({ isLoading: false, isCompleted: true, isValid: true });
         console.log({ response });
-
     };
 
 
