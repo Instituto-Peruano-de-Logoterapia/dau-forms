@@ -1,9 +1,8 @@
 'use client'
 
-import React from 'react'
-import { Button, Flex, FormControl, Input, Alert, AlertIcon } from '@chakra-ui/react';
-import { useProducts } from '@app/contexts/hooks';
 import { DauService } from '@app/services';
+import { Alert, AlertIcon, Button, Flex, FormControl, Input } from '@chakra-ui/react';
+import React from 'react';
 
 export function NewsletterForm({ onCongrats }) {
 
@@ -111,7 +110,7 @@ export function NewsletterForm({ onCongrats }) {
                             borderColor={'#ccc'}
                             name='phone'
                             borderRadius={'0.375rem'}
-                            placeholder='Ingresa tu número de teléfono'
+                            placeholder='Ej. +51982393722'
                             onChange={onInputChange}
                         />
                     </FormControl>
@@ -125,7 +124,7 @@ export function NewsletterForm({ onCongrats }) {
                             borderColor={'#ccc'}
                             type='email'
                             name='email'
-                            placeholder='Ingresa tu correo aquí'
+                            placeholder='Ej. johndoe@gmail.com'
                             onChange={onInputChange}
                         />
                     </FormControl>

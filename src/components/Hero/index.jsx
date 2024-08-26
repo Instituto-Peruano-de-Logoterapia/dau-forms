@@ -11,7 +11,7 @@ export function Hero() {
 
     const [hero, setHero] = useState({
         title: "¡Te brindamos la logoterapia a tu vida!",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci recusandae neque, maiores nisi magnam molestias nostrum voluptates pariatur asperiores magni? At esse consequuntur tempora fugiat porro voluptates corporis sapiente ex!"
+        description: "Transforma tu vida con nuestra capacitación virtual en Logoterapia y Tanatología. Este espacio integral está diseñado para quienes buscan darle un nuevo sentido a su vida. Accede a herramientas valiosas para tu desarrollo personal y profesional."
     });
 
     const { currentCategory, onSetCurrentCategory, onSetProducts, onSetGridItems } = useProducts();
@@ -26,7 +26,8 @@ export function Hero() {
         if (!currentCategory) {
             setHero({
                 title: "¡Te brindamos la logoterapia a tu vida!",
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci recusandae neque, maiores nisi magnam molestias nostrum voluptates pariatur asperiores magni? At esse consequuntur tempora fugiat porro voluptates corporis sapiente ex!"
+                description: "¡Te brindamos la logoterapia a tu vida!",
+                description: "Transforma tu vida con nuestra capacitación virtual en Logoterapia y Tanatología. Este espacio integral está diseñado para quienes buscan darle un nuevo sentido a su vida. Accede a herramientas valiosas para tu desarrollo personal y profesional."
             })
             return;
         }

@@ -7,7 +7,7 @@ const navigation = [
         href: '/'
     },
     {
-        text: 'Newsletter',
+        text: 'Boletin',
         href: '#newsletter'
     },
     {

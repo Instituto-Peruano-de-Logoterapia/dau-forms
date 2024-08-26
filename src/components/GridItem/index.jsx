@@ -70,15 +70,49 @@ export function GridItem({ item }) {
         <div
             onClick={() => onClickItem()}
             className='bg-center shadow-md bg-white bg-cover cursor-pointer rounded-md transition-transform duration-300 ease-in-out transform hover:translate-y-[-4px]  p-4 flex flex-col justify-between gap-5 relative'>
+            {
+                item.type === 'PRODUCT' && (
+                    <React.Fragment>
+                        <img className='rounded-md' src={`/products/card-images/${item.id}.webp`} alt="banner" />
+                    </React.Fragment>
+                )
+            }
             <h2 className={`${inter.className} text-md font-bold line-clamp-2`}>
                 {item.name}
             </h2>
             <hr className='border-neutral-300' />
-            <p className='line-clamp-4 text-sm'>{item.description}</p>
-            <div className='flex justify-center flex-col gap-2'>
+
+            {
+                item.type === 'CATEGORY' && (
+                    <p className='line-clamp-4 text-sm'>{item.description}</p>
+                )
+            }
+
+            <div className='flex justify-center flex-col gap-3'>
                 {
                     item.type === 'PRODUCT' && (
                         <React.Fragment>
+                            <ul className='text-sm'>
+                                {
+                                    item.categoryId !== 'd6c070ad-5dd7-493b-b316-7251ff95b91c' && (
+                                        <React.Fragment>
+                                            <li><strong>Inicio:</strong> {item.dateIni}</li>
+                                            <li><strong>Hora:</strong> {item.hour}</li>
+                                            <li><strong>Duración:</strong> {item.duration}</li>
+                                        </React.Fragment>
+                                    )
+                                }
+                                {
+                                    item.categoryId === 'd6c070ad-5dd7-493b-b316-7251ff95b91c' && (
+                                        <React.Fragment>
+                                            <li><strong>Contenido:</strong> {item.content}</li>
+                                            <li><strong>Duración:</strong> {item.duration}</li>
+                                            <li><strong>Disponible:</strong> {item.available}</li>
+                                        </React.Fragment>
+
+                                    )
+                                }
+                            </ul>
                             <Rating />
                         </React.Fragment>
                     )
