@@ -88,7 +88,6 @@ export function SignProductForm() {
         }
 
         setFormState({ isLoading: false, isCompleted: true, isValid: true });
-        console.log({ response });
     };
 
 
