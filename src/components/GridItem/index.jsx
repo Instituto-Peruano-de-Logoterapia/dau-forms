@@ -97,7 +97,7 @@ export function GridItem({ item }) {
                                     item.categoryId !== 'd6c070ad-5dd7-493b-b316-7251ff95b91c' && (
                                         <React.Fragment>
                                             <li><strong>Inicio:</strong> {item.dateIni}</li>
-                                            <li><strong>Hora:</strong> {item.hour}</li>
+                                            {item.hour && <li><strong>Hora:</strong> {item.hour}</li>}
                                             <li><strong>Duración:</strong> {item.duration}</li>
                                         </React.Fragment>
                                     )

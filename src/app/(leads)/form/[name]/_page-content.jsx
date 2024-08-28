@@ -38,7 +38,7 @@ export function PageContent({ productName }) {
                                     currentProduct.categoryId !== 'd6c070ad-5dd7-493b-b316-7251ff95b91c' && (
                                         <React.Fragment>
                                             <li><strong>Inicio:</strong> {currentProduct.dateIni}</li>
-                                            <li><strong>Hora:</strong> {currentProduct.hour}</li>
+                                            {currentProduct.hour && <li><strong>Hora:</strong> {currentProduct.hour}</li>}
                                             <li><strong>Duración:</strong> {currentProduct.duration}</li>
                                         </React.Fragment>
                                     )

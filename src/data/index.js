@@ -1,6 +1,7 @@
 export const categories = [
     {
         id: '91cbed5f-2c5b-44cd-b8ee-69975dd7544b',
+        isActive: true,
         name: 'Clases Síncronas y Asíncronas',
         constantName: 'SYNC_ASYNC_PRODUCTS',
         type: 'CATEGORY',
@@ -11,6 +12,7 @@ export const categories = [
     {
         id: 'd7d05a02-6e39-4610-b759-f61f6b94e143',
         name: 'Clases en vivo',
+        isActive: true,
         constantName: 'LIVE_STREAM_PRODUCTOS',
         type: 'CATEGORY',
         description: 'Únete a nuestras clases en vivo y aprende en tiempo real con nuestros expertos. Interactúa, pregunta y participa activamente para aprovechar al máximo cada sesión.',
@@ -20,6 +22,7 @@ export const categories = [
     {
         id: 'd6c070ad-5dd7-493b-b316-7251ff95b91c',
         name: 'Cursos en diferido',
+        isActive: true,
         constantName: 'DEFER_PRODUCTS',
         type: 'CATEGORY',
         description: 'Accede a nuestros cursos en diferido y aprende a tu propio ritmo. Disfruta de contenidos de alta calidad y vuelve a revisar las lecciones cuando lo necesites.',
@@ -91,7 +94,7 @@ export const products = [
         categoryId: 'd7d05a02-6e39-4610-b759-f61f6b94e143',
         description: 'Inscríbete en la Formación de Tanatología y Cuidado al Final de la Vida y adquiere herramientas para acompañar el proceso de duelo, integrando el concepto de la muerte desde distintas creencias.',
         dateIni: '17 de Agosto',
-        hour: '10:00 a 12:00 pm Hora Perú',
+
         duration: '18 Meses',
         constantName: 'XVI_FORMACION_TANATOLOGIA',
         isNew: false
@@ -99,13 +102,13 @@ export const products = [
     {
         id: '6f7g8h9i-0j1k-2l3m-4n5o-6p7q8r9s0t1u',
         name: 'Taller Vivencial Sanar por Dentro',
-        isActive: true,
+        isActive: false,
         type: 'PRODUCT',
         categoryId: 'd7d05a02-6e39-4610-b759-f61f6b94e143',
         description: 'Fecha: sábado 13 JUL 24. Horario: 3pm a 6pm – Hora Perú. Modalidad: Online.',
         constantName: 'TALLER_VIVENCIAL_SANAR',
         dateIni: '16 de Septiembre',
-        hour: '',
+        hour: 'TBD',
         duration: '5 días',
         isNew: true
     },
@@ -117,7 +120,6 @@ export const products = [
         categoryId: 'd7d05a02-6e39-4610-b759-f61f6b94e143',
         description: 'Inscríbete en el Curso Intensivo de Tanatología en Roma y desarrolla las habilidades necesarias para acompañar a otros en situaciones límite, mientras profundizas en el cuidado de los demás y de ti mismo.',
         dateIni: '16 de Septiembre',
-        hour: '',
         duration: '5 Días',
         constantName: 'II_CURSO_TANATOLOGIA_ROMA',
         isNew: true
