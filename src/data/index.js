@@ -44,6 +44,7 @@ export const products = [
         hour: '7:30 pm Hora Perú',
         duration: '7 Meses',
         constantName: 'CIV_DIPLO_LOGOTERAPIA',
+        pdfLink: 'https://drive.google.com/file/d/1GagbFPMr389WzMrHRBBla_OWSIGYQaDy/view?usp=sharing',
         isNew: true
     },
     {
@@ -56,6 +57,7 @@ export const products = [
         dateIni: '19 de Junio',
         hour: '7:30 pm Hora Perú',
         duration: '7 Meses',
+        pdfLink: 'https://drive.google.com/file/d/1-RTDXgMmB_wHYwY4eak6mS7Tl5bvdmu8/view?usp=sharing',
         constantName: 'XXVIII_DIPLO_TANATOLOGIA',
         isNew: false
     },
@@ -70,6 +72,7 @@ export const products = [
         dateIni: '25 de Septiembre',
         hour: '7:00 pm a 9:00 pm Hora Perú',
         duration: '5 Meses',
+        pdfLink: 'https://drive.google.com/file/d/1_eAc64UK14uNYMG67edQfW0kTL7gtx4A/view?usp=sharing',
         constantName: 'I_DIPLO_CONSTELACIONES',
         isNew: false
     },
@@ -83,6 +86,7 @@ export const products = [
         dateIni: '13 de Septiembre',
         hour: '7:00 pm a 9:00 pm Hora Perú',
         duration: '2 Años',
+        pdfLink: 'https://drive.google.com/file/d/1AU4U5SZYIruN-dUaOmmD2m0mbPBKcg-Q/view?usp=sharing',
         constantName: 'XXVII_FORMACION_LOGOTERAPIA',
         isNew: false
     },
@@ -94,7 +98,7 @@ export const products = [
         categoryId: 'd7d05a02-6e39-4610-b759-f61f6b94e143',
         description: 'Inscríbete en la Formación de Tanatología y Cuidado al Final de la Vida y adquiere herramientas para acompañar el proceso de duelo, integrando el concepto de la muerte desde distintas creencias.',
         dateIni: '17 de Agosto',
-
+        pdfLink: 'https://drive.google.com/file/d/1YwW407xMbgkQ58MaD2njar0zgvT--yRH/view?usp=sharing',
         duration: '18 Meses',
         constantName: 'XVI_FORMACION_TANATOLOGIA',
         isNew: false
@@ -121,6 +125,7 @@ export const products = [
         description: 'Inscríbete en el Curso Intensivo de Tanatología en Roma y desarrolla las habilidades necesarias para acompañar a otros en situaciones límite, mientras profundizas en el cuidado de los demás y de ti mismo.',
         dateIni: '16 de Septiembre',
         duration: '5 Días',
+        pdfLink: 'https://drive.google.com/file/d/13JOQ_2AbkCV38316cRaBM24C4imzwsnf/view?usp=sharing',
         constantName: 'II_CURSO_TANATOLOGIA_ROMA',
         isNew: true
     },
@@ -160,6 +165,7 @@ export const products = [
         description: 'Inscríbete en el Curso Online Hijos Rebeldes y aprende a conectar con tu hijo, entender su conducta desafiante, evitar conflictos de poder y promover un ambiente positivo en casa.',
         constantName: 'CURSO_ONLINE_HIJOS_REBELDES',
         content: 'Grabado',
+        pdfLink: 'https://drive.google.com/file/d/1TiUB1lj6Q7waWGrhdYQ3HcK2_J_7XvQ7/view?usp=sharing',
         available: '24 horas',
         duration: '4 Sesiones',
         isNew: false
@@ -172,6 +178,7 @@ export const products = [
         categoryId: 'd6c070ad-5dd7-493b-b316-7251ff95b91c',
         description: 'Inscríbete en el Curso Online Superando el Estrés y aprende estrategias para manejar el estrés, liberar tensiones y afrontar situaciones límite.',
         constantName: 'CURSO_ONLINE_SUPERANDO_ESTRES',
+        pdfLink: 'https://drive.google.com/file/d/1JjVDnxlMIERR2cJSxVMqXV9Tf6Fg__py/view?usp=sharing',
         content: 'Grabado',
         available: '24 horas',
         duration: '4 Sesiones',
@@ -186,6 +193,7 @@ export const products = [
         description: 'Inscríbete en el Curso Online Empezar de Nuevo y transforma tu vida. Sal de tu zona de confort, cambia tu mentalidad y conviértete en tu mejor versión.',
         constantName: 'CURSO_ONLINE_EMPEZAR_NUEVO',
         content: 'Grabado',
+        pdfLink: 'https://drive.google.com/file/d/19XLqI9dQ32CuCrYrmizoi0HMuRpjmFgn/view?usp=sharing',
         available: '24 horas',
         duration: '4 Sesiones',
         isNew: false
