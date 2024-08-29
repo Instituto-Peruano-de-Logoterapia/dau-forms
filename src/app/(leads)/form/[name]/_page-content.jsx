@@ -4,7 +4,7 @@ import { Banner, SignProductForm } from '@app/components';
 import { useProducts } from '@app/contexts/hooks';
 import { products } from '@app/data';
 import { ArrowBackIcon } from '@chakra-ui/icons';
-import { Flex, Text } from '@chakra-ui/react';
+import { Flex, Text, Button } from '@chakra-ui/react';
 import Link from 'next/link';
 import React, { useEffect } from 'react';
 
@@ -55,6 +55,13 @@ export function PageContent({ productName }) {
                                 }
                             </ul>
                         </React.Fragment>
+                    )
+                }
+                {
+                    currentProduct?.pdfLink && (
+                        <div className='flex justify-center items-center mt-10'>
+                            <Link href={currentProduct.pdfLink} className='bg-slate-100 uppercase py-3 px-5 rounded-md'>Ver pdf informativo</Link>
+                        </div>
                     )
                 }
             </div>
