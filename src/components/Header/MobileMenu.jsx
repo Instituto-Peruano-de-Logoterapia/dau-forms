@@ -9,16 +9,14 @@ import {
     ModalFooter,
     ModalHeader,
     ModalOverlay,
-    useDisclosure,
-    Box
+    useDisclosure
 } from '@chakra-ui/react';
 import React from 'react';
 
-import { FacebookIcon, TikTokIcon, InstagramIcon, Socials } from '@app/components';
+import { FacebookIcon, InstagramIcon, TikTokIcon } from '@app/components';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 import { Logo } from '../Logo';
-import { Navigation } from '../Navigation';
 
 export function MobileMenu() {
 

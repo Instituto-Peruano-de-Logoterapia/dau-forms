@@ -4,10 +4,11 @@ import React from 'react'
 const navigation = [
     {
         text: 'Inicio',
-        href: '/'
+        href: '/',
+   
     },
     {
-        text: 'Newsletter',
+        text: 'Boletín',
         href: '#newsletter'
     },
     {

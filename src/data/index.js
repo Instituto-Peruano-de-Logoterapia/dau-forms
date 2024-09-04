@@ -1,6 +1,7 @@
 export const categories = [
     {
         id: '91cbed5f-2c5b-44cd-b8ee-69975dd7544b',
+        isActive: true,
         name: 'Clases Síncronas y Asíncronas',
         constantName: 'SYNC_ASYNC_PRODUCTS',
         type: 'CATEGORY',
@@ -11,15 +12,17 @@ export const categories = [
     {
         id: 'd7d05a02-6e39-4610-b759-f61f6b94e143',
         name: 'Clases en vivo',
+        isActive: true,
         constantName: 'LIVE_STREAM_PRODUCTOS',
         type: 'CATEGORY',
-        description: 'Únete a nuestras clases en vivo y aprende en tiempo real con nuestros expertos. Interactúa, pregunta y participa activamente para aprovechar al máximo cada sesión.',
+        description: 'Únete a nuestras clases en vivo por Zoom y aprende en tiempo real junto a nuestros expertos. Aprovecha cada sesión al máximo: interactúa, haz preguntas y participa activamente desde la comodidad de tu hogar.',
         tags: ['Formaciones', 'Diplomados', 'Talleres', 'Cursos'],
         isNew: true
     },
     {
         id: 'd6c070ad-5dd7-493b-b316-7251ff95b91c',
         name: 'Cursos en diferido',
+        isActive: true,
         constantName: 'DEFER_PRODUCTS',
         type: 'CATEGORY',
         description: 'Accede a nuestros cursos en diferido y aprende a tu propio ritmo. Disfruta de contenidos de alta calidad y vuelve a revisar las lecciones cuando lo necesites.',
@@ -32,63 +35,86 @@ export const products = [
     // Clases Síncronas y Asíncronas
     {
         id: '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p',
-        name: 'CIV Diplomado Internacional de Logoterapia y Sentido de Vida - Online',
+        name: 'Diplomado Internacional de Logoterapia y Sentido de Vida - Online',
         isActive: true,
         type: 'PRODUCT',
         categoryId: '91cbed5f-2c5b-44cd-b8ee-69975dd7544b',
-        description: 'Últimas inscripciones: 19 AGO 24. Acceso a Clase en vivo: Lunes 26 AGO 24 a las 7:30pm - Hora de Perú.',
-        constantName: 'CIV_DIPLO_LOGOTERAPIA',
+        description: 'Inscríbete en el Diplomado en Logoterapia y aprende a transformar situaciones difíciles en crecimiento personal. Dirigido a profesionales, estudiantes y público en general.',
+        dateIni: '9 de Setiembre',
+        hour: '7:30 pm Hora Perú',
+        duration: '7 Meses',
+        constantName: 'DIPLO_LOGOTERAPIA',
+        pdfLink: 'https://drive.google.com/file/d/1GagbFPMr389WzMrHRBBla_OWSIGYQaDy/view?usp=sharing',
         isNew: true
     },
     {
         id: '2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q',
-        name: 'XXVIII Diplomado Internacional de Tanatología y Cuidados Paliativos - Online',
+        name: 'Diplomado Internacional de Tanatología y Cuidados Paliativos - Online',
         isActive: true,
         type: 'PRODUCT',
         categoryId: '91cbed5f-2c5b-44cd-b8ee-69975dd7544b',
-        description: 'Cierre de inscripciones: 10 JUN 24. Inicio de Clases regulares: miércoles 19 JUN 24 a las 7:30pm - Hora de Perú. Clases en vivo serán los miércoles a las 7:30pm a 9:30pm - Hora de Perú.',
-        constantName: 'XXVIII_DIPLO_TANATOLOGIA',
+        description: 'Inscríbete en el Diplomado en Tanatología y descubre cómo brindar acompañamiento en procesos de duelo, ayudando a transformar la pérdida en crecimiento personal. Dirigido a profesionales, estudiantes y público en general.',
+        dateIni: '19 de Junio',
+        hour: '7:30 pm Hora Perú',
+        duration: '7 Meses',
+        pdfLink: 'https://drive.google.com/file/d/1-RTDXgMmB_wHYwY4eak6mS7Tl5bvdmu8/view?usp=sharing',
+        constantName: 'DIPLO_TANATOLOGIA',
         isNew: false
     },
     // Clases en Vivo
     {
         id: '3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r',
-        name: 'I Diplomado en Constelaciones Familiares - Online',
+        name: 'II Diplomado en Constelaciones Familiares - Online',
         isActive: true,
         type: 'PRODUCT',
         categoryId: 'd7d05a02-6e39-4610-b759-f61f6b94e143',
-        description: 'Cierre de inscripciones: 15 JUN 24. Inicio de Clases regulares: viernes 05 JUL 24 de 7:00 pm Hora de Perú. Clases en vivo serán los viernes a las 7:00pm a 9:00pm - Hora de Perú.',
+        description: 'Inscríbete en el Diplomado en Constelaciones Familiares y comprende cómo las dinámicas de tu sistema familiar influyen en tus relaciones. Aprende a transformar patrones y sanar heridas para tu crecimiento personal y profesional.',
+        dateIni: '25 de Septiembre',
+        hour: '7:00 pm a 9:00 pm Hora Perú',
+        duration: '6 Meses',
+        pdfLink: 'https://drive.google.com/file/d/1_eAc64UK14uNYMG67edQfW0kTL7gtx4A/view?usp=sharing',
         constantName: 'I_DIPLO_CONSTELACIONES',
-        isNew: false
+        isNew: true,
     },
     {
         id: '4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s',
-        name: 'XXVII Formación en Logoterapia',
+        name: 'Formación Internacional en Logoterapia y Análisis Existencial',
         isActive: true,
         type: 'PRODUCT',
         categoryId: 'd7d05a02-6e39-4610-b759-f61f6b94e143',
-        description: 'Clases Magistral: viernes 09 AGOSTO 24 de 7:00 pm a 9:00pm – Hora de Perú - Modalidad online. Seminario Internacional: sábado 10 AGOSTO 24 de 9:00am a 1:00pm – Hora de Perú - Modalidad online. Clases regulares: martes 13 AGOSTO 24 de 7:00 pm a 9:00pm – Hora de Perú - Modalidad online.',
-        constantName: 'XXVII_FORMACION_LOGOTERAPIA',
+        description: 'Inscríbete en la Formación Internacional en Logoterapia y adquiere herramientas para acompañar procesos de sentido, salud y transformación personal desde una visión antropológica.',
+        dateIni: '13 de Agosto',
+        hour: '7:00 pm a 9:00 pm Hora Perú',
+        duration: '2 Años',
+        pdfLink: 'https://drive.google.com/file/d/1AU4U5SZYIruN-dUaOmmD2m0mbPBKcg-Q/view?usp=sharing',
+        constantName: 'FORMACION_LOGOTERAPIA',
         isNew: false
     },
     {
         id: '5e6f7g8h-9i0j-1k2l-3m4n-5o6p7q8r9s0t',
-        name: 'XVI Formación en Tanatología',
+        name: 'Formación Internacional en Tanatología y Cuidados al final de la vida',
         isActive: true,
         type: 'PRODUCT',
         categoryId: 'd7d05a02-6e39-4610-b759-f61f6b94e143',
-        description: 'Clases Magistral: viernes 09 AGOSTO 24 de 7:00 pm a 9:00pm – Hora de Perú - Modalidad online. Seminario Internacional: sábado 10 AGOSTO 24 de 9:00am a 1:00pm – Hora de Perú - Modalidad online. Clases regulares: sábado 17 AGOSTO 24 de 10:00am a 12:00 pm – Hora de Perú - Modalidad online.',
-        constantName: 'XVI_FORMACION_TANATOLOGIA',
+        description: 'Inscríbete en la Formación de Tanatología y Cuidado al Final de la Vida y adquiere herramientas para acompañar el proceso de duelo, integrando el concepto de la muerte desde distintas creencias.',
+        dateIni: '17 de Agosto',
+        hour: '10:00 am a 12:00 pm Hora Perú',
+        pdfLink: 'https://drive.google.com/file/d/1YwW407xMbgkQ58MaD2njar0zgvT--yRH/view?usp=sharing',
+        duration: '18 Meses',
+        constantName: 'FORMACION_TANATOLOGIA',
         isNew: false
     },
     {
         id: '6f7g8h9i-0j1k-2l3m-4n5o-6p7q8r9s0t1u',
         name: 'Taller Vivencial Sanar por Dentro',
-        isActive: true,
+        isActive: false,
         type: 'PRODUCT',
         categoryId: 'd7d05a02-6e39-4610-b759-f61f6b94e143',
         description: 'Fecha: sábado 13 JUL 24. Horario: 3pm a 6pm – Hora Perú. Modalidad: Online.',
         constantName: 'TALLER_VIVENCIAL_SANAR',
+        dateIni: '16 de Septiembre',
+        hour: 'TBD',
+        duration: '5 días',
         isNew: true
     },
     {
@@ -97,10 +123,42 @@ export const products = [
         isActive: true,
         type: 'PRODUCT',
         categoryId: 'd7d05a02-6e39-4610-b759-f61f6b94e143',
-        description: 'Días centrales: 16 al 20 de Septiembre del 2024. Cierre de inscripciones: 28 Agosto 24.',
+        description: 'Inscríbete en el Curso Intensivo de Tanatología en Roma y desarrolla las habilidades necesarias para acompañar a otros en situaciones límite, mientras profundizas en el cuidado de los demás y de ti mismo.',
+        dateIni: '16 de Septiembre',
+        duration: '5 Días',
+        pdfLink: 'https://drive.google.com/file/d/13JOQ_2AbkCV38316cRaBM24C4imzwsnf/view?usp=sharing',
         constantName: 'II_CURSO_TANATOLOGIA_ROMA',
         isNew: true
     },
+
+    {
+        id: 'b4dcf3b5-df68-47b4-a4f9-a3f731e3891b',
+        name: 'Diplomado en Logoterapia e Intervención en Bulimia y Anorexia',
+        isActive: true,
+        type: 'PRODUCT',
+        categoryId: 'd7d05a02-6e39-4610-b759-f61f6b94e143',
+        description: 'Adquiere conocimientos para abordar la bulimia y la anorexia desde la Logoterapia. Aprende a acompañar a las personas en su proceso de recuperación, ayudándolas a encontrar un sentido que transforme sus vidas.',
+        dateIni: '01 de Octubre',
+        duration: '6 Meses',
+        constantName: 'DIPLOMADO_LOGOTERAPIA_BULIMIA',
+        isNew: true
+    },
+
+    {
+        id: 'a7016371-41c6-4f46-a7cc-18d183da8b75',
+        name: 'Diplomado en Logoterapia e Intervención en Adicciones',
+        isActive: true,
+        type: 'PRODUCT',
+        categoryId: 'd7d05a02-6e39-4610-b759-f61f6b94e143',
+        description: 'Aprende a abordar las adicciones desde la Logoterapia y acompaña a otros en su búsqueda de sentido y recuperación.',
+        dateIni: '01 de Octubre',
+        duration: '6 Meses',
+        constantName: 'DIPLOMADO_LOGOTERAPIA_ADICCIONES',
+        isNew: true
+    },
+
+
+
     // Cursos en diferido
     {
         id: '8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w',
@@ -108,8 +166,11 @@ export const products = [
         isActive: true,
         type: 'PRODUCT',
         categoryId: 'd6c070ad-5dd7-493b-b316-7251ff95b91c',
-        description: 'Disponible las 24 horas, no hay horarios. Inicia cuando el alumno notifique su pago y se le activa en 72 horas en sistema.',
+        description: 'Inscríbete en el Curso Diario Íntimo basado en la Logoterapia y el Diario Intensivo de Ira Progoff. Descubre cómo fortalecer y potenciar tu interior en tiempos de incertidumbre y crecimiento personal.',
         constantName: 'CURSO_ONLINE_DIARIO_INTIMO',
+        content: 'Grabado y 14 audios',
+        available: '24 horas',
+        duration: 'Duración: 2 Talleres',
         isNew: false
     },
     {
@@ -118,8 +179,11 @@ export const products = [
         isActive: true,
         type: 'PRODUCT',
         categoryId: 'd6c070ad-5dd7-493b-b316-7251ff95b91c',
-        description: 'Disponible las 24 horas, no hay horarios. Inicia cuando el alumno notifique su pago y se le activa en 72 horas en sistema. Acceso a clases en video de manera semanal.',
+        description: 'Inscríbete en el Curso Intensivo de Arquetipos y aprende a transformar patrones reactivos, recuperar energía y conectar con tu poder creativo y espiritual.',
         constantName: 'CURSO_INTENSIVO_ARQUETIPOS',
+        content: 'Grabado',
+        available: '24 horas',
+        duration: '12 Sesiones',
         isNew: true
     },
     {
@@ -128,8 +192,12 @@ export const products = [
         isActive: true,
         type: 'PRODUCT',
         categoryId: 'd6c070ad-5dd7-493b-b316-7251ff95b91c',
-        description: 'Disponible las 24 horas, no hay horarios. Inicia cuando el alumno notifique su pago y se le activa en 72 horas en sistema.',
+        description: 'Inscríbete en el Curso Online Hijos Rebeldes y aprende a conectar con tu hijo, entender su conducta desafiante, evitar conflictos de poder y promover un ambiente positivo en casa.',
         constantName: 'CURSO_ONLINE_HIJOS_REBELDES',
+        content: 'Grabado',
+        pdfLink: 'https://drive.google.com/file/d/1TiUB1lj6Q7waWGrhdYQ3HcK2_J_7XvQ7/view?usp=sharing',
+        available: '24 horas',
+        duration: '4 Sesiones',
         isNew: false
     },
     {
@@ -138,8 +206,12 @@ export const products = [
         isActive: true,
         type: 'PRODUCT',
         categoryId: 'd6c070ad-5dd7-493b-b316-7251ff95b91c',
-        description: 'Disponible las 24 horas, no hay horarios. Inicia cuando el alumno notifique su pago y se le activa en 72 horas en sistema.',
+        description: 'Inscríbete en el Curso Online Superando el Estrés y aprende estrategias para manejar el estrés, liberar tensiones y afrontar situaciones límite.',
         constantName: 'CURSO_ONLINE_SUPERANDO_ESTRES',
+        pdfLink: 'https://drive.google.com/file/d/1JjVDnxlMIERR2cJSxVMqXV9Tf6Fg__py/view?usp=sharing',
+        content: 'Grabado',
+        available: '24 horas',
+        duration: '4 Sesiones',
         isNew: true
     },
     {
@@ -148,8 +220,12 @@ export const products = [
         isActive: true,
         type: 'PRODUCT',
         categoryId: 'd6c070ad-5dd7-493b-b316-7251ff95b91c',
-        description: 'Disponible las 24 horas, no hay horarios. Inicia cuando el alumno notifique su pago y se le activa en 72 horas en sistema.',
+        description: 'Inscríbete en el Curso Online Empezar de Nuevo y transforma tu vida. Sal de tu zona de confort, cambia tu mentalidad y conviértete en tu mejor versión.',
         constantName: 'CURSO_ONLINE_EMPEZAR_NUEVO',
+        content: 'Grabado',
+        pdfLink: 'https://drive.google.com/file/d/19XLqI9dQ32CuCrYrmizoi0HMuRpjmFgn/view?usp=sharing',
+        available: '24 horas',
+        duration: '4 Sesiones',
         isNew: false
     }
 ];

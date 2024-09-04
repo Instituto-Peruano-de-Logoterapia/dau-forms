@@ -22,6 +22,7 @@ export function useCountries() {
                     callingCode: `${country.idd.root}${country.idd.suffixes}`
                 }));
 
+                currentCountries.sort((a, b) => a.name.localeCompare(b.name));
                 setCountries(currentCountries);
             } catch (error) {
                 console.log('error while retriving the countries')
